@@ -1,0 +1,1257 @@
+# MASTER PRODUCTION ENGINEERING PROMPT
+# NOVARA COMMERCE — COMPLETE CHECKOUT PAGE + ORDER SUCCESS EXPERIENCE + ADMIN ORDER MANAGEMENT
+
+You are acting as a Principal Full-Stack Engineer, Senior E-commerce Architect, Backend Architect, Database Engineer, UI/UX Designer, Security Engineer, and QA Automation Engineer.
+
+Your mission is to upgrade the existing NOVARA COMMERCE Checkout System into a premium, fully functional, database-driven, production-ready e-commerce checkout and order processing system.
+
+The uploaded image is the MANDATORY PRIMARY DESIGN REFERENCE.
+
+REFERENCE IMAGE:
+NOVARA Secure Checkout Experience.png
+
+The final Checkout Page MUST closely reproduce the uploaded reference image's visual design, layout, color palette, spacing, typography, components, cards, icons, proportions, and premium blue-and-white visual identity.
+
+IMPORTANT:
+
+This is NOT a frontend-only redesign.
+
+You MUST implement and verify the complete end-to-end functionality across:
+
+- Frontend
+- Backend
+- Database
+- Admin Panel
+- API Routes
+- Router Modules
+- Backend Controllers
+- Backend Services
+- Database Models
+- Shipping Address Management
+- Bangladesh Geographic Location Management
+- Delivery Options
+- Payment Methods
+- Coupon Integration
+- Order Processing
+- Inventory Management
+- Order Success Page
+- Admin Order Management
+- Order Notifications
+- Security and Validation
+
+Do not build a disconnected demo checkout.
+
+Upgrade the actual existing NOVARA COMMERCE checkout architecture.
+
+==================================================
+PHASE 1 — MANDATORY COMPLETE PROJECT AUDIT
+==================================================
+
+Before writing or modifying any code, thoroughly inspect the entire existing project.
+
+Read and understand:
+
+1. Complete frontend architecture.
+2. Existing Checkout Page.
+3. Existing Cart Page.
+4. Existing Product Details Page.
+5. Cart state management.
+6. Product pricing system.
+7. Product variant system.
+8. Inventory management.
+9. Coupon and discount system.
+10. Shipping configuration.
+11. Existing address management.
+12. Bangladesh location data, if available.
+13. Existing payment integrations.
+14. Backend API architecture.
+15. Backend controllers.
+16. Backend service modules.
+17. Database schemas and models.
+18. Existing order creation logic.
+19. Order status management.
+20. Admin Panel architecture.
+21. Admin order management.
+22. Customer account management.
+23. Authentication and authorization.
+24. Notification architecture.
+25. Existing router modules.
+
+Trace the actual business workflow:
+
+Product → Add to Cart → Cart Page → Checkout → Address Validation → Delivery Selection → Payment Selection → Order Creation → Payment Verification → Order Success → Admin Order Management.
+
+Identify which features already exist and work correctly.
+
+Reuse existing services, models, API routes, components, and business logic wherever possible.
+
+Do not create duplicate systems unnecessarily.
+
+Prepare a safe implementation plan before modifying the project.
+
+==================================================
+PHASE 2 — REFERENCE-BASED CHECKOUT PAGE DESIGN
+==================================================
+
+The uploaded reference image is the mandatory visual specification.
+
+Recreate its appearance as closely as possible.
+
+Do not replace it with a generic checkout template.
+
+A. GLOBAL HEADER
+
+Preserve the existing NOVARA global header.
+
+Maintain:
+
+- Announcement bar.
+- NOVARA logo.
+- Search bar.
+- Account icon.
+- Wishlist icon.
+- Cart icon and dynamic cart count.
+- Category navigation.
+- Main navigation.
+- Special Offer button.
+
+Reuse existing global components.
+
+Do not create duplicate headers.
+
+B. CHECKOUT HERO SLIDER — MANDATORY
+
+Create a premium, full-width promotional hero slider.
+
+Follow the uploaded image.
+
+Reference content:
+
+Small Label:
+Secure & Easy Checkout
+
+Main Heading:
+Complete Your Order Quickly & Securely!
+
+Subtitle:
+Shop with Confidence – Your Satisfaction is Our Priority.
+
+These are examples only.
+
+All content must be dynamically controlled through the existing Admin Panel banner management system or a compatible dedicated Checkout Hero Slider Management module.
+
+ADMIN MUST BE ABLE TO:
+
+- Create slides.
+- View slides.
+- Update slides.
+- Delete slides.
+- Upload desktop images.
+- Upload mobile images.
+- Change headings.
+- Change subtitles.
+- Change descriptions.
+- Configure CTA buttons.
+- Configure CTA destination URLs.
+- Reorder slides.
+- Enable or disable slides.
+- Publish or unpublish slides.
+- Preview slides.
+
+The public Checkout Page must retrieve active slides from the backend.
+
+Never hardcode slider content.
+
+Ensure proper responsive images, smooth transitions, navigation dots, and automatic sliding.
+
+If no active slide exists, handle it gracefully without breaking Checkout.
+
+==================================================
+PHASE 3 — SHIPPING ADDRESS FORM
+==================================================
+
+Recreate the Shipping Address section shown in the reference.
+
+The design must include a numbered section indicator, heading, supporting text, and secure/encrypted information indicator.
+
+MANDATORY ADDRESS FIELDS:
+
+1. Division *
+2. District *
+3. Thana / Upazila *
+4. Union / Area where applicable *
+5. Full Name *
+6. Email Address *
+7. Mobile Number *
+8. Complete Address Details *
+
+Additional fields may be added when required by the existing project.
+
+BANGLADESH GEOGRAPHIC ADDRESS SYSTEM — CRITICAL:
+
+Implement a genuine hierarchical geographic selection system.
+
+Required hierarchy:
+
+Division → District → Thana/Upazila → Union.
+
+The dropdowns must be dependent on one another.
+
+Expected behavior:
+
+- Initially show available divisions.
+- After selecting a division, retrieve only its associated districts.
+- After selecting a district, retrieve only its associated thanas/upazilas.
+- After selecting a thana/upazila, retrieve its associated unions where applicable.
+- Reset dependent selections whenever a parent selection changes.
+- Prevent invalid combinations.
+- Display loading states while fetching data.
+- Display meaningful errors if geographic data cannot be retrieved.
+
+IMPORTANT:
+
+Do not hardcode only a few example divisions, districts, or unions.
+
+Inspect the existing database and geographic data.
+
+If a complete Bangladesh location dataset already exists, reuse it.
+
+If it does not exist, implement a suitable normalized geographic data structure and populate it using a reliable, verified Bangladesh administrative dataset.
+
+Do not fabricate geographical relationships.
+
+Support locations where union selection is not applicable through an appropriate delivery-area configuration.
+
+The geographic structure should be maintainable through the existing Admin Panel if the project already supports location management.
+
+All address information must be stored correctly with the order.
+
+CUSTOMER VALIDATION:
+
+- Full name must be validated.
+- Email must be validated where required.
+- Mobile number must be validated.
+- Required address fields must be completed.
+- Invalid geographic combinations must be rejected.
+- Address length must be validated.
+- Display field-specific error messages.
+
+Preserve the customer's selected address when navigating between checkout steps if applicable.
+
+==================================================
+PHASE 4 — DELIVERY OPTIONS
+==================================================
+
+Recreate the Delivery Options section from the reference image.
+
+Display delivery choices as premium selectable cards.
+
+Example:
+
+Standard Delivery
+Within 2–5 Business Days
+৳60
+
+These are example values only.
+
+All delivery options must come from the existing backend shipping configuration.
+
+ADMIN CONFIGURATION:
+
+Where not already available, provide compatible Admin Panel controls for:
+
+- Delivery method name.
+- Delivery description.
+- Delivery charge.
+- Estimated delivery time.
+- Delivery availability.
+- Applicable locations.
+- Minimum order requirements.
+- Free shipping eligibility.
+- Enable / Disable.
+- Display ordering.
+
+The administrator must be able to configure shipping without editing source code.
+
+FRONTEND REQUIREMENTS:
+
+- Show only applicable delivery options.
+- Allow customers to select an eligible option.
+- Display delivery charges.
+- Update Order Summary immediately after selection.
+- Validate the selected delivery option again on the backend.
+
+Never trust a shipping fee submitted by the frontend.
+
+==================================================
+PHASE 5 — PAYMENT METHODS
+==================================================
+
+Recreate the payment method section shown in the reference.
+
+Use premium selectable payment cards with suitable payment brand assets.
+
+Potential methods:
+
+1. Cash on Delivery.
+2. bKash.
+3. Nagad.
+
+IMPORTANT:
+
+These are required design targets, but payment methods must only be displayed as operational when the corresponding payment integration is configured and supported.
+
+Inspect existing payment gateways and reuse their actual integrations.
+
+For each payment method, implement the correct payment workflow.
+
+CASH ON DELIVERY:
+
+- Validate COD availability.
+- Create an appropriate pending or confirmed payment state.
+- Record the payment method.
+- Record the order payment status.
+- Allow Admin to manage COD orders.
+- Mark payment as collected only through authorized status updates.
+
+bKASH / NAGAD:
+
+- Integrate with the existing official payment gateway implementation.
+- Use secure backend payment initiation.
+- Validate gateway responses.
+- Verify transaction status server-side.
+- Validate transaction identifiers.
+- Handle successful, failed, cancelled, and pending transactions.
+- Support payment callback or webhook verification where supported.
+- Prevent duplicate payment processing.
+
+SECURITY REQUIREMENTS:
+
+Never expose secret payment credentials in frontend code.
+
+Never trust a frontend success response as proof of payment.
+
+Never mark an order as paid without verified payment confirmation.
+
+Do not simulate real payment success.
+
+If gateway credentials are unavailable, provide an accurate configuration state and clearly report the limitation.
+
+==================================================
+PHASE 6 — DYNAMIC ORDER SUMMARY
+==================================================
+
+Recreate the right-side Order Summary card from the reference image.
+
+Display:
+
+- Product image.
+- Product name.
+- Selected variant information.
+- Unit price.
+- Quantity.
+- Item total.
+- Subtotal.
+- Delivery charge.
+- Discount.
+- Applied coupon.
+- Total Amount.
+- Coupon input.
+- Apply button.
+- Edit Cart link.
+
+All values must be retrieved from actual cart and checkout data.
+
+The Order Summary must update whenever:
+
+- Cart items change.
+- Quantity changes.
+- Selected variants change.
+- Coupon is applied.
+- Coupon is removed.
+- Delivery option changes.
+- Shipping address changes, where shipping eligibility depends on location.
+
+CRITICAL:
+
+The backend must calculate the authoritative order total.
+
+Never trust frontend prices or totals.
+
+Validate:
+
+- Product existence.
+- Variant availability.
+- Inventory.
+- Current product price.
+- Quantity.
+- Discounts.
+- Coupon eligibility.
+- Shipping fees.
+- Payment eligibility.
+- Final payable amount.
+
+The final order amount must be calculated using the same pricing rules as the backend checkout service.
+
+Prevent price manipulation and double discount application.
+
+==================================================
+PHASE 7 — COUPON INTEGRATION
+==================================================
+
+Integrate the existing coupon management system.
+
+Support:
+
+- Coupon code entry.
+- Apply coupon.
+- Remove coupon.
+- Valid coupon.
+- Invalid coupon.
+- Expired coupon.
+- Minimum order amount.
+- Percentage discount.
+- Fixed discount.
+- Maximum discount.
+- Usage limits.
+- User restrictions.
+- Product or category restrictions where supported.
+
+All coupon validation must happen on the backend.
+
+Do not display fake coupon success messages.
+
+==================================================
+PHASE 8 — PREMIUM ORDER SUCCESS PAGE
+==================================================
+
+THIS IS A MANDATORY CORE REQUIREMENT.
+
+After an order is successfully created and its required payment conditions are satisfied, redirect the customer to a dedicated premium Order Success Page.
+
+Do not simply display a plain text success message.
+
+Create a visually impressive, modern, premium order confirmation experience consistent with the NOVARA blue-and-white design system.
+
+DESIGN REQUIREMENTS:
+
+A. SUCCESS ANIMATION
+
+Display:
+
+- Beautiful animated success checkmark.
+- Smooth circular completion animation.
+- Elegant confirmation transition.
+- Subtle particle or confetti animation.
+- Premium visual feedback.
+- Smooth content entrance animation.
+
+Animation should be lightweight and performance-friendly.
+
+Respect reduced-motion accessibility preferences.
+
+Do not use excessive animations that delay access to order information.
+
+B. SUCCESS CONTENT
+
+Example:
+
+Order Placed Successfully!
+
+Thank you for shopping with NOVARA.
+
+Your order has been successfully received.
+
+Display:
+
+- Unique Order ID.
+- Order Date.
+- Customer Name.
+- Order Total.
+- Payment Method.
+- Payment Status.
+- Order Status.
+- Delivery Address.
+- Ordered Products.
+- Product Variants.
+- Quantities.
+- Estimated Delivery Date where reliably available.
+
+C. CUSTOMER ACTIONS
+
+Provide:
+
+- View Order Details.
+- Track My Order.
+- Continue Shopping.
+- Download Invoice where supported.
+- Contact Support.
+
+Each action must connect to the correct existing route or service.
+
+D. ORDER STATUS INFORMATION
+
+Provide a professional order progress indicator where supported.
+
+Example:
+
+Order Placed → Confirmed → Processing → Shipped → Delivered.
+
+Display accurate current order status.
+
+Do not show future stages as completed.
+
+E. SUCCESS VERIFICATION
+
+A success page must never be accessible as proof of a successful order simply because a user opens a success URL.
+
+Fetch and verify the actual order through an authorized backend endpoint.
+
+Ensure that the customer can only access their own order information.
+
+For guest checkout, use a secure, appropriately scoped order-access mechanism.
+
+Never expose sensitive order information through predictable public IDs.
+
+IMPORTANT:
+
+If payment is pending or failed, show the correct payment state instead of falsely displaying a fully paid success message.
+
+==================================================
+PHASE 9 — ORDER CREATION AND DATABASE INTEGRITY
+==================================================
+
+Implement a reliable production-grade order creation workflow.
+
+The order must store an immutable snapshot of the relevant purchase information.
+
+REQUIRED ORDER DATA:
+
+- Unique Order ID.
+- Customer ID where applicable.
+- Guest customer information where applicable.
+- Product references.
+- Product names at purchase time.
+- Product images where appropriate.
+- Variant information.
+- SKU where available.
+- Unit prices.
+- Quantities.
+- Subtotal.
+- Discount.
+- Coupon information.
+- Shipping charge.
+- Final total.
+- Selected delivery method.
+- Shipping address snapshot.
+- Payment method.
+- Payment status.
+- Order status.
+- Transaction reference where applicable.
+- Created timestamp.
+- Updated timestamp.
+
+DATABASE REQUIREMENTS:
+
+Inspect the existing database schema first.
+
+Reuse the current Order Model if suitable.
+
+Implement only the necessary schema changes.
+
+Use database transactions or equivalent consistency mechanisms where supported.
+
+Prevent duplicate orders from repeated checkout submissions.
+
+Implement idempotency protection for order creation and payment callbacks.
+
+Handle stock reservation or inventory deduction according to the existing order and payment lifecycle.
+
+Never deduct inventory multiple times for the same order.
+
+Never create duplicate orders because of a network retry.
+
+If payment fails, apply the existing inventory restoration or reservation-expiry policy correctly.
+
+Preserve historical product prices and variant information inside orders.
+
+Do not rely on current product information to reconstruct historical orders.
+
+==================================================
+PHASE 10 — ADMIN PANEL: COMPLETE ORDER MANAGEMENT
+==================================================
+
+THIS IS A MANDATORY REQUIREMENT.
+
+Inspect the existing Admin Panel and upgrade the existing Order Management module.
+
+Do not create a duplicate Order Management system if one already exists.
+
+The administrator must be able to see all actual orders created through checkout.
+
+ORDER DASHBOARD:
+
+Display accurate database-driven statistics:
+
+- Total Orders.
+- New Orders.
+- Pending Orders.
+- Confirmed Orders.
+- Processing Orders.
+- Shipped Orders.
+- Delivered Orders.
+- Cancelled Orders.
+- Returned Orders.
+- Total Sales.
+- Pending Payments.
+- Paid Orders.
+
+These figures must be calculated from actual database records and valid order/payment statuses.
+
+ORDER MANAGEMENT TABLE:
+
+Display:
+
+- Order ID.
+- Customer Name.
+- Mobile Number.
+- Order Date.
+- Product Count.
+- Order Amount.
+- Payment Method.
+- Payment Status.
+- Order Status.
+- Delivery Status.
+- Action Buttons.
+
+ADMIN FEATURES:
+
+1. View All Orders.
+2. View Single Order Details.
+3. Search by Order ID.
+4. Search by Customer Name.
+5. Search by Mobile Number.
+6. Filter by Order Status.
+7. Filter by Payment Status.
+8. Filter by Date.
+9. Filter by Delivery Status.
+10. Sort Orders.
+11. Paginate Results.
+12. Update Order Status.
+13. Update Payment Status with proper authorization and verification.
+14. Update Delivery Status.
+15. Add Internal Admin Notes.
+16. View Customer Shipping Address.
+17. View Ordered Products.
+18. View Variant Information.
+19. View Payment Information.
+20. View Order Timeline.
+21. Cancel Orders according to business rules.
+22. Process returns where supported.
+23. Print or Download Invoice.
+
+ORDER STATUS MANAGEMENT:
+
+Implement a controlled status transition system.
+
+Possible statuses:
+
+- Pending.
+- Confirmed.
+- Processing.
+- Shipped.
+- Delivered.
+- Cancelled.
+- Returned.
+
+Use only the statuses and transitions compatible with the existing architecture.
+
+Prevent invalid status transitions.
+
+Maintain an audit trail of status changes, including:
+
+- Previous Status.
+- New Status.
+- Changed By.
+- Timestamp.
+- Optional Notes.
+
+PAYMENT STATUS:
+
+Possible statuses:
+
+- Pending.
+- Paid.
+- Failed.
+- Refunded.
+- Partially Refunded where supported.
+
+Do not allow unauthorized manual payment confirmation.
+
+Verified payment gateway results must remain authoritative.
+
+==================================================
+PHASE 11 — ADMIN ORDER COUNTS AND AUTOMATIC UPDATES
+==================================================
+
+The Admin Panel must display accurate, automatically refreshed order statistics.
+
+When a new order is successfully created:
+
+- Save it in the database.
+- Make it appear in the Admin Order List.
+- Update relevant order counts.
+- Update dashboard statistics.
+- Update pending-order counts.
+- Record the correct order timestamp.
+- Trigger configured admin notifications.
+
+Use the existing real-time architecture if available.
+
+Otherwise, use an appropriate polling or refresh strategy.
+
+If WebSockets or Server-Sent Events already exist, reuse them where appropriate.
+
+IMPORTANT:
+
+Do not implement fake countdown timers or artificial order counts.
+
+If the existing project has an order expiry countdown, payment timeout, reservation timer, or delivery estimate, preserve its actual business logic.
+
+All displayed time-based information must come from real timestamps and backend rules.
+
+==================================================
+PHASE 12 — CUSTOMER ORDER NOTIFICATIONS
+==================================================
+
+Inspect the existing notification system.
+
+Where supported, integrate order notifications for:
+
+- Order Successfully Placed.
+- Order Confirmed.
+- Payment Successful.
+- Payment Failed.
+- Order Processing.
+- Order Shipped.
+- Order Delivered.
+- Order Cancelled.
+
+Use existing email, SMS, or in-app notification infrastructure.
+
+Do not pretend notifications were sent if no notification provider is configured.
+
+Handle notification failures without accidentally creating duplicate orders.
+
+==================================================
+PHASE 13 — TRUST AND PROMOTIONAL SECTIONS
+==================================================
+
+Recreate the additional sections visible in the reference image.
+
+A. SHOP WITH CONFIDENCE
+
+Include:
+
+- 7-Day Return Policy where supported.
+- Secure Payment.
+- Genuine Products where verified.
+
+B. WHY CHOOSE NOVARA?
+
+Include:
+
+- Free Shipping.
+- 24/7 Support.
+- Secure Payment.
+- Easy Returns.
+
+C. SERVICE INFORMATION STRIP
+
+Include:
+
+- Best Deals.
+- Fast Delivery.
+- 24/7 Support.
+- Trusted Store Rating.
+
+IMPORTANT:
+
+Do not fabricate ratings, security certifications, delivery guarantees, or return policies.
+
+Use existing site settings and verified business information.
+
+D. EXISTING FOOTER
+
+Preserve the existing NOVARA global footer.
+
+Do not duplicate it.
+
+==================================================
+PHASE 14 — ADMIN CONFIGURATION
+==================================================
+
+Inspect the existing Admin Panel settings.
+
+Where configuration is missing, implement compatible controls for:
+
+- Checkout Hero Slides.
+- Delivery Methods.
+- Shipping Charges.
+- Free Shipping Threshold.
+- Delivery Availability.
+- Geographic Delivery Areas.
+- Payment Method Availability.
+- COD Availability.
+- Checkout Settings.
+- Order Status Configuration where appropriate.
+- Return Policy Information.
+- Delivery Information.
+
+All settings must be stored persistently.
+
+All public-facing configuration must be retrieved from the backend.
+
+Use proper authorization for administrative changes.
+
+Do not create unnecessary duplicate configuration modules.
+
+==================================================
+PHASE 15 — SECURITY AND PRODUCTION RELIABILITY
+==================================================
+
+Apply production-grade security.
+
+Mandatory requirements:
+
+- Server-side validation.
+- Authentication.
+- Role-based authorization.
+- Secure order ownership validation.
+- Secure payment verification.
+- Idempotent order creation.
+- Duplicate submission prevention.
+- Input sanitization.
+- Rate limiting where appropriate.
+- Secure API error handling.
+- Safe database operations.
+- Inventory consistency.
+- Price manipulation prevention.
+- Coupon manipulation prevention.
+- Payment callback verification.
+- Protection against unauthorized order access.
+
+Never expose:
+
+- Payment secrets.
+- Internal credentials.
+- Sensitive customer data.
+- Administrative information.
+
+Never trust frontend-submitted prices or payment statuses.
+
+==================================================
+PHASE 16 — RESPONSIVE DESIGN AND ANIMATIONS
+==================================================
+
+The uploaded image is a desktop design reference.
+
+Maintain its design identity across devices.
+
+DESKTOP:
+
+- Full-width promotional hero slider.
+- Two-column checkout layout.
+- Shipping form on the left.
+- Order Summary on the right.
+- Delivery selection.
+- Payment method cards.
+- Trust sections.
+- Global footer.
+
+TABLET:
+
+- Adapt column widths.
+- Maintain readable forms.
+- Avoid overflow.
+- Keep the order summary accessible.
+
+MOBILE:
+
+- Responsive hero slider.
+- Single-column checkout.
+- Compact form controls.
+- Full-width input fields.
+- Accessible dropdowns.
+- Compact order summary.
+- Touch-friendly payment cards.
+- Prominent Place Order button.
+- Properly displayed success animation.
+
+ANIMATIONS:
+
+Use premium, smooth animations for:
+
+- Hero slider transitions.
+- Section entrance.
+- Payment method selection.
+- Button interactions.
+- Loading states.
+- Order completion.
+- Success checkmark.
+
+Keep animations lightweight.
+
+Respect reduced-motion preferences.
+
+Do not sacrifice usability or performance for decoration.
+
+==================================================
+PHASE 17 — STRICT BACKWARD COMPATIBILITY
+==================================================
+
+THIS SECTION IS ABSOLUTELY NON-NEGOTIABLE.
+
+You are upgrading the Checkout and Order Processing modules only.
+
+DO NOT:
+
+- Rewrite the entire project.
+- Replace the existing application architecture.
+- Replace the database.
+- Change unrelated business logic.
+- Break authentication.
+- Break authorization.
+- Rename existing URLs.
+- Change existing route structures unnecessarily.
+- Delete existing API endpoints.
+- Replace working payment integrations.
+- Break the existing Cart Page.
+- Break the Product Details Page.
+- Break product variants.
+- Break inventory management.
+- Break coupon functionality.
+- Break existing customer accounts.
+- Redesign unrelated pages.
+- Replace global components unnecessarily.
+- Delete existing database records.
+- Introduce unnecessary dependencies.
+
+The current Checkout Page design may be replaced by the reference design.
+
+However, existing working checkout logic must be preserved and reused.
+
+The new Order Success Page must integrate with the actual order system.
+
+Admin Order Management must use the same actual order database and business logic.
+
+Preserve all existing routes and public interfaces.
+
+If supporting changes are necessary, make the smallest backward-compatible modifications possible.
+
+Do not refactor unrelated modules.
+
+==================================================
+PHASE 18 — COMPLETE END-TO-END TESTING
+==================================================
+
+Do not finish after building the UI.
+
+Perform actual tests using the existing application.
+
+TEST A — CHECKOUT PAGE
+
+- Open Checkout Page.
+- Verify the reference-based layout.
+- Verify hero slider.
+- Verify responsive layout.
+- Verify cart data.
+- Verify product variants.
+- Verify order summary.
+
+TEST B — BANGLADESH ADDRESS
+
+- Select a Division.
+- Verify related Districts.
+- Select a District.
+- Verify related Thanas/Upazilas.
+- Select a Thana.
+- Verify applicable Unions.
+- Change the Division.
+- Verify dependent selections reset.
+- Submit invalid geographic combinations.
+- Verify backend rejects invalid combinations.
+
+TEST C — DELIVERY
+
+- Select an available delivery option.
+- Change delivery options.
+- Verify charges update.
+- Verify location restrictions.
+- Verify final backend shipping calculation.
+
+TEST D — PAYMENT
+
+Test each configured payment method.
+
+For COD:
+
+- Place a valid COD order.
+- Verify order creation.
+- Verify payment status.
+- Verify Admin visibility.
+
+For online payments:
+
+- Test successful payment using the gateway's supported sandbox/test environment.
+- Test failed payment.
+- Test cancelled payment.
+- Test pending payment.
+- Verify transaction validation.
+- Verify duplicate callbacks are handled safely.
+
+Do not perform unauthorized real financial transactions.
+
+TEST E — ORDER CREATION
+
+- Submit valid checkout data.
+- Verify order is saved in the database.
+- Verify correct Order ID.
+- Verify correct customer information.
+- Verify correct address.
+- Verify correct products.
+- Verify correct variants.
+- Verify correct quantities.
+- Verify correct total.
+- Verify correct payment method.
+- Verify correct order status.
+
+TEST F — ORDER SUCCESS PAGE
+
+- Verify success animation.
+- Verify actual Order ID.
+- Verify order summary.
+- Verify payment status.
+- Verify customer details.
+- Verify order details link.
+- Verify tracking link where supported.
+- Verify unauthorized access is blocked.
+- Verify refreshing the success page does not create another order.
+
+TEST G — ADMIN ORDER MANAGEMENT
+
+- Verify newly created orders appear.
+- Verify dashboard statistics.
+- Verify order counts.
+- Verify customer information.
+- Verify payment status.
+- Verify order status updates.
+- Verify status history.
+- Verify filters.
+- Verify search.
+- Verify invoice.
+- Verify permissions.
+
+TEST H — INVENTORY AND DUPLICATE PREVENTION
+
+- Verify stock validation.
+- Verify variant-specific stock.
+- Verify inventory updates.
+- Verify duplicate submission protection.
+- Verify repeated payment callbacks.
+- Verify failed payment handling.
+- Verify inventory restoration where applicable.
+
+TEST I — REGRESSION
+
+Verify:
+
+- Product Details Page.
+- Add to Cart.
+- Cart Page.
+- Wishlist.
+- Checkout.
+- Payment.
+- Order creation.
+- Customer account.
+- Admin Dashboard.
+- Existing order management.
+- Existing routes.
+
+==================================================
+PHASE 19 — FINAL BUILD AND ERROR AUDIT
+==================================================
+
+After implementation:
+
+1. Run the existing frontend build.
+2. Run backend startup.
+3. Verify database connection.
+4. Verify relevant API endpoints.
+5. Run relevant automated tests.
+6. Inspect browser console.
+7. Inspect backend logs.
+8. Verify API JSON responses.
+9. Verify payment sandbox integration.
+10. Verify Admin Panel access.
+11. Verify responsive design.
+12. Verify order database persistence.
+13. Verify security checks.
+14. Verify checkout-to-order workflow.
+
+Fix genuine defects introduced or discovered in the modified workflow.
+
+Do not suppress errors or replace broken integrations with mock implementations.
+
+==================================================
+PHASE 20 — FINAL ACCEPTANCE CRITERIA
+==================================================
+
+The project is considered complete only when these conditions are actually verified.
+
+CHECKOUT DESIGN:
+
+[ ] Reference-matching premium checkout layout.
+[ ] Dynamic checkout hero slider.
+[ ] Shipping Address form.
+[ ] Bangladesh geographic dropdowns.
+[ ] Delivery Options.
+[ ] Payment Methods.
+[ ] Dynamic Order Summary.
+[ ] Coupon Integration.
+[ ] Premium Trust Sections.
+[ ] Responsive Desktop, Tablet and Mobile.
+
+BACKEND AND DATABASE:
+
+[ ] Address validation.
+[ ] Delivery validation.
+[ ] Payment validation.
+[ ] Order creation.
+[ ] Order persistence.
+[ ] Inventory consistency.
+[ ] Duplicate prevention.
+[ ] Secure API integration.
+
+ORDER SUCCESS:
+
+[ ] Premium success animation.
+[ ] Correct Order ID.
+[ ] Correct order information.
+[ ] Correct payment status.
+[ ] Order Details navigation.
+[ ] Order Tracking navigation where supported.
+[ ] Secure order access.
+
+ADMIN PANEL:
+
+[ ] Orders appear automatically.
+[ ] Dashboard counts are correct.
+[ ] Order search works.
+[ ] Order filters work.
+[ ] Order details work.
+[ ] Order status updates work.
+[ ] Payment status is accurate.
+[ ] Delivery status updates work.
+[ ] Order history works.
+[ ] Invoice functionality works where supported.
+
+BACKWARD COMPATIBILITY:
+
+[ ] Existing Cart functionality preserved.
+[ ] Existing Product functionality preserved.
+[ ] Existing Payment integrations preserved.
+[ ] Existing Authentication preserved.
+[ ] Existing API routes preserved.
+[ ] Existing URLs preserved.
+[ ] Unrelated pages remain unchanged.
+[ ] Existing business logic remains intact.
+
+==================================================
+PHASE 21 — FINAL ENGINEERING REPORT
+==================================================
+
+After completing the implementation, provide a detailed engineering report.
+
+Include:
+
+1. Existing project audit.
+2. Checkout Page redesign.
+3. Bangladesh address system.
+4. Delivery management.
+5. Payment integrations.
+6. Coupon integration.
+7. Backend changes.
+8. Database changes.
+9. API and router changes.
+10. Order creation workflow.
+11. Order Success Page.
+12. Admin Order Management.
+13. Dashboard statistics.
+14. Security audit.
+15. Inventory validation.
+16. End-to-end testing.
+17. Regression testing.
+18. Build results.
+19. Remaining issues.
+
+For each test, report:
+
+- PASSED
+- FAILED
+- BLOCKED
+- NOT TESTED
+
+Never claim that a feature works without actual verification.
+
+Clearly distinguish implemented features from existing features that were reused.
+
+==================================================
+FINAL EXECUTION DIRECTIVE
+==================================================
+
+First, inspect the entire NOVARA COMMERCE codebase.
+
+Study the uploaded checkout reference image carefully.
+
+Understand the existing checkout, cart, payment, database, and order management architecture.
+
+Then create the premium reference-matching Checkout Page.
+
+Implement the complete Bangladesh address selection system.
+
+Implement delivery and payment integration.
+
+Implement secure, database-backed order creation.
+
+Create the premium animated Order Success Page.
+
+Integrate everything with the existing Admin Panel and Order Management system.
+
+Ensure accurate order counts and status updates.
+
+Perform complete functional, integration, security, and regression testing.
+
+Make only necessary and minimal backward-compatible changes.
+
+If an existing feature already works correctly, preserve it.
+
+If an existing API or service is suitable, reuse it.
+
+Never rebuild unrelated features.
+
+Never use mock data to pretend that production functionality exists.
+
+Never stop after frontend implementation.
+
+THE FINAL RESULT MUST BE A PREMIUM, SECURE, FULL-STACK, DATABASE-DRIVEN, FULLY FUNCTIONAL NOVARA COMMERCE CHECKOUT AND ORDER PROCESSING SYSTEM.
+
+PRODUCTION QUALITY IS MANDATORY.
+
+DESIGN FIDELITY IS MANDATORY.
+
+BACKEND AND DATABASE INTEGRATION IS MANDATORY.
+
+ADMIN PANEL INTEGRATION IS MANDATORY.
+
+END-TO-END VERIFICATION IS MANDATORY.

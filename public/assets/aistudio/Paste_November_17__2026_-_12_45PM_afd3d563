@@ -1,0 +1,1164 @@
+# MASTER PRODUCTION ENGINEERING PROMPT
+## NOVARA COMMERCE — COMPLETE DYNAMIC PRODUCT MANAGEMENT, ATTRIBUTE, VARIANT & PRODUCT DETAILS SYSTEM
+
+You are acting as a Senior Full-Stack Software Architect, Principal Backend Engineer, Database Architect, Senior UI/UX Designer, and E-commerce Platform Engineer.
+
+Your task is to deeply inspect, understand, upgrade, and implement a complete enterprise-grade Dynamic Product Management System for the existing NOVARA COMMERCE project.
+
+This is NOT a request to create a new standalone application.
+
+You MUST work inside the existing project and preserve its current architecture, technology stack, business logic, authentication system, authorization system, routes, components, design language, and existing functionality.
+
+The primary objective is to transform the existing static or partially dynamic Product Creation and Product Details system into a fully database-driven, configurable, scalable, and production-ready e-commerce product architecture.
+
+==================================================
+PHASE 1 — MANDATORY COMPLETE PROJECT AUDIT
+==================================================
+
+BEFORE WRITING OR MODIFYING ANY CODE, thoroughly inspect the entire existing project.
+
+Do not make assumptions about the current implementation.
+
+Read and understand:
+
+1. Complete frontend architecture.
+2. Existing Admin Panel.
+3. Product Management module.
+4. Product Create page.
+5. Product Edit page.
+6. Product Listing page.
+7. Existing Product Details page.
+8. Category and Subcategory management.
+9. Existing product data models.
+10. Database schemas and relationships.
+11. Backend API routes.
+12. Controllers and services.
+13. Authentication and authorization.
+14. Image upload and media management.
+15. Product pricing and discount logic.
+16. Inventory and stock management.
+17. Cart and wishlist functionality.
+18. Customer reviews and ratings.
+19. Search, filtering, and sorting.
+20. Existing frontend routing and URL structures.
+
+Trace the complete product lifecycle:
+
+Admin Product Creation → Backend Validation → Database Storage → Product API → Customer-Facing Product Details Page → Cart → Checkout.
+
+Identify all existing hardcoded product specifications, static product attributes, fixed variant options, mock data, incomplete API integrations, and disconnected frontend components.
+
+Prepare an internal implementation plan based on the actual project architecture.
+
+IMPORTANT:
+Do not start implementing until you understand how the existing product system works.
+
+==================================================
+PHASE 2 — COMPLETE DYNAMIC PRODUCT ATTRIBUTE ENGINE
+==================================================
+
+Implement a powerful, flexible, database-driven Product Attribute Management Engine.
+
+The system MUST NOT depend on predefined, hardcoded specification fields for individual product categories.
+
+An authorized administrator must be able to create unlimited practical custom product attributes according to the application's supported limits and infrastructure.
+
+Examples:
+
+A. MOBILE PHONE ATTRIBUTES
+
+- Brand
+- Model
+- RAM
+- Internal Storage
+- Processor
+- Chipset
+- Battery Capacity
+- Battery Type
+- Charging Power
+- Display Size
+- Display Type
+- Refresh Rate
+- Front Camera
+- Rear Camera
+- Operating System
+- Network Technology
+- 5G Support
+- SIM Type
+- Weight
+- Dimensions
+- Color
+- Warranty
+
+B. COMPUTER / LAPTOP ATTRIBUTES
+
+- Brand
+- Model
+- Processor Brand
+- Processor Model
+- Processor Generation
+- CPU Cores
+- RAM Capacity
+- RAM Type
+- SSD Capacity
+- HDD Capacity
+- Graphics Card
+- GPU Memory
+- Display Resolution
+- Refresh Rate
+- Operating System
+- Battery Capacity
+- Connectivity
+- Weight
+- Warranty
+
+C. CLOTHING / SHIRT ATTRIBUTES
+
+- Brand
+- Manufacturer
+- Fabric
+- Material
+- Gender
+- Fit Type
+- Sleeve Type
+- Collar Type
+- Pattern
+- Available Colors
+- Size
+- Country of Origin
+- Washing Instructions
+
+D. SHOES ATTRIBUTES
+
+- Brand
+- Model
+- Shoe Type
+- Material
+- Available Sizes
+- EU Size
+- UK Size
+- US Size
+- Color
+- Sole Material
+- Upper Material
+- Gender
+- Closure Type
+- Warranty
+
+These are examples, NOT fixed mandatory fields.
+
+The administrator must be able to create additional attributes beyond these examples.
+
+==================================================
+PHASE 3 — ADVANCED ATTRIBUTE BUILDER IN ADMIN PANEL
+==================================================
+
+Create a professional Dynamic Attribute Builder.
+
+The administrator must be able to:
+
+1. Create a new attribute.
+2. Edit an existing attribute.
+3. Delete an attribute safely.
+4. Rename attributes.
+5. Assign attributes to specific categories.
+6. Assign attributes to multiple categories.
+7. Create global attributes.
+8. Create category-specific attributes.
+9. Create product-specific custom attributes.
+10. Set attribute display order.
+11. Control attribute visibility.
+12. Set attributes as optional or required.
+13. Define default values.
+14. Configure validation rules.
+15. Define measurement units.
+16. Control customer-facing visibility.
+17. Mark attributes as filterable.
+18. Mark attributes as searchable.
+19. Mark attributes as comparable.
+20. Group related attributes into sections.
+
+Support appropriate attribute input types:
+
+- Short Text
+- Long Text
+- Number
+- Decimal
+- Boolean / Yes-No
+- Single Select
+- Multiple Select
+- Color Selector
+- Date
+- URL
+- Measurement with Unit
+- Image or File Reference where appropriate
+
+For example, an administrator can create:
+
+Attribute Name: Battery Capacity
+Input Type: Number
+Unit: mAh
+Required: Optional
+Visible on Product Details: Yes
+Filterable: Yes
+
+Another example:
+
+Attribute Name: Processor
+Input Type: Text
+Required: Optional
+Visible on Product Details: Yes
+
+The administrator must also be able to create completely new attributes without requiring developer intervention or source-code modification.
+
+IMPORTANT:
+Support both predefined reusable attributes and additional product-specific attributes.
+
+Do not force every product to use the same attribute structure.
+
+==================================================
+PHASE 4 — ADVANCED PRODUCT VARIANT ENGINE
+==================================================
+
+Implement a proper Product Variant Management System.
+
+Understand the difference between:
+
+- Product Attributes: Technical or descriptive product information.
+- Product Variants: Purchasable versions of the same product.
+- Product Options: Choices presented to customers.
+- Product Specifications: Structured technical information.
+- Product Features: Highlighted selling points.
+- Product Custom Fields: Additional administrator-defined information.
+
+These concepts must be implemented separately but integrated correctly.
+
+Examples:
+
+MOBILE PHONE:
+
+Product: Samsung Galaxy
+
+Variant dimensions:
+- RAM: 8GB / 12GB
+- Storage: 128GB / 256GB / 512GB
+- Color: Black / Blue / Silver
+
+Each valid variant may have its own:
+
+- SKU
+- Price
+- Sale Price
+- Stock Quantity
+- Images
+- Availability
+- Barcode
+- Weight
+- Status
+
+SHIRT:
+
+Variant dimensions:
+- Size: S / M / L / XL / XXL
+- Color: Black / White / Blue
+
+SHOES:
+
+Variant dimensions:
+- Size: 38 / 39 / 40 / 41 / 42 / 43 / 44 / 45
+- Color
+- Material where relevant
+
+The administrator must be able to:
+
+1. Create custom variant dimensions.
+2. Add unlimited practical option values.
+3. Create combinations of options.
+4. Generate valid variant combinations.
+5. Exclude unavailable combinations.
+6. Set individual variant prices.
+7. Set individual variant stock.
+8. Set individual variant SKUs.
+9. Upload variant-specific images.
+10. Enable or disable individual variants.
+11. Edit or delete variants.
+12. Manage variant availability.
+13. Track inventory independently per variant.
+
+Do not assume every product needs variants.
+
+A simple product must be creatable without variants.
+
+Do not generate unnecessary combinations or duplicate SKUs.
+
+Ensure inventory is updated correctly when a customer purchases a specific variant.
+
+==================================================
+PHASE 5 — COMPLETE DYNAMIC PRODUCT CREATION FORM
+==================================================
+
+Upgrade the existing Admin Product Creation interface.
+
+Create a professional, organized, responsive, multi-section product creation experience.
+
+Recommended sections:
+
+1. Basic Product Information
+2. Product Categories
+3. Brand and Manufacturer
+4. Product Images and Gallery
+5. Product Videos
+6. Pricing and Discounts
+7. Inventory and SKU
+8. Dynamic Attributes
+9. Product Specifications
+10. Product Variants
+11. Product Features and Highlights
+12. Product Description
+13. Additional Information
+14. Shipping Information
+15. Warranty and Return Information
+16. SEO Settings
+17. Product Visibility and Publishing
+
+All sections must be configurable.
+
+BASIC INFORMATION:
+
+- Product Name
+- Product Slug
+- Short Description
+- Full Description
+- Category
+- Subcategory
+- Brand
+- Product Status
+- Featured Product
+- Best Seller
+- New Arrival
+
+MEDIA:
+
+- Main Product Image
+- Multiple Gallery Images
+- Variant Images
+- Optional Product Videos
+- Image Sorting
+- Image Alt Text
+
+PRICING:
+
+- Regular Price
+- Sale Price
+- Discount Percentage
+- Cost Price, if supported
+- Tax Configuration, if supported
+
+INVENTORY:
+
+- SKU
+- Barcode
+- Stock Quantity
+- Stock Status
+- Low Stock Threshold
+- Manage Inventory Toggle
+- Backorder Configuration, if supported
+
+DYNAMIC SPECIFICATIONS:
+
+Load category-specific attributes from the database.
+
+Allow the administrator to add additional custom attributes directly while creating or editing a product.
+
+The administrator must be able to add, remove, reorder, and edit specification rows.
+
+Example:
+
+Specification Name: Battery Capacity
+Value: 5000
+Unit: mAh
+
+Specification Name: Charging Power
+Value: 67
+Unit: W
+
+Specification Name: Processor
+Value: Snapdragon 8 Gen 3
+
+These fields must be dynamically stored and retrieved.
+
+All additional fields must be OPTIONAL unless the administrator explicitly marks them as required.
+
+An administrator must never be forced to fill irrelevant information.
+
+==================================================
+PHASE 6 — DYNAMIC PRODUCT DETAILS PAGE
+==================================================
+
+CRITICAL REQUIREMENT:
+
+The customer-facing Product Details Page MUST visually follow the uploaded reference image:
+
+"NOVARA MacBook Air M4 Store Page.png"
+
+Treat the uploaded image as the primary visual design reference.
+
+Reproduce its layout, spacing, proportions, colors, visual hierarchy, component placement, and overall premium e-commerce appearance as closely as possible.
+
+Do not replace this design with an unrelated template.
+
+The product details page should include:
+
+A. HEADER
+
+- Top announcement bar.
+- NOVARA logo.
+- Product search.
+- Account icon.
+- Wishlist icon.
+- Cart icon.
+- Category navigation.
+- Shop navigation.
+- Special Offer button.
+
+Preserve the existing global header implementation wherever possible.
+
+B. BREADCRUMB
+
+Show dynamic navigation:
+
+Home → Category → Subcategory → Product Name.
+
+Generate breadcrumb links from actual database relationships.
+
+C. PRODUCT IMAGE GALLERY
+
+Create a premium gallery similar to the reference:
+
+- Vertical thumbnail gallery.
+- Main product image.
+- Multiple gallery images.
+- Additional image count indicator.
+- Image zoom.
+- Image navigation.
+- Full-screen image preview where supported.
+
+All images must come from the actual product database.
+
+D. PRODUCT INFORMATION
+
+Display dynamically:
+
+- Product Badge
+- Product Name
+- Short Description
+- Average Rating
+- Review Count
+- Sold Count, if tracked
+- Regular Price
+- Sale Price
+- Discount Percentage
+- Stock Status
+- Delivery Information
+
+Never hardcode these values.
+
+If optional information is unavailable, hide that specific element cleanly.
+
+E. PRODUCT HIGHLIGHTS
+
+Display selected product highlights dynamically.
+
+Example for a laptop:
+
+- M4 Chip
+- Up to 18 Hours Battery
+- 13.6-inch Display
+- Ultra-light Design
+
+Example for a mobile:
+
+- 5000mAh Battery
+- 12GB RAM
+- 256GB Storage
+- 200MP Camera
+
+These highlights must be configurable from the Admin Panel.
+
+Do not use laptop-specific highlights for mobile products.
+
+F. DYNAMIC VARIANT SELECTOR
+
+Display only the actual options configured for the selected product.
+
+Examples:
+
+Storage Capacity:
+256GB / 512GB / 1TB
+
+RAM:
+8GB / 12GB / 16GB
+
+Color:
+Available color swatches.
+
+Clothing Size:
+S / M / L / XL / XXL
+
+Shoe Size:
+38 / 39 / 40 / 41 / 42 / 43 / 44 / 45
+
+Options must be loaded from the database.
+
+When a customer selects a variant:
+
+- Update the selected variant.
+- Update the displayed price.
+- Update the SKU where applicable.
+- Update stock availability.
+- Update product images where configured.
+- Update variant-specific information.
+- Prevent purchasing unavailable combinations.
+
+G. QUANTITY SELECTOR
+
+Include quantity increment and decrement controls.
+
+Validate quantity against available inventory.
+
+H. PURCHASE ACTIONS
+
+- Add to Cart.
+- Add to Wishlist.
+- Buy Now, if supported.
+
+All buttons must use existing backend integrations and real database data.
+
+I. TRUST AND SERVICE INFORMATION
+
+Create configurable service highlights similar to the reference:
+
+- 100% Original Products
+- Fast Delivery
+- 24/7 Support
+- Secure Payment
+- Easy Returns
+
+Where possible, manage these through existing site settings instead of hardcoding them into each product.
+
+J. PRODUCT INFORMATION TABS
+
+Implement:
+
+1. Description
+2. Specifications
+3. Customer Reviews
+4. Q&A
+5. Shipping & Returns
+
+DESCRIPTION:
+
+Render the actual product description and optional content sections.
+
+SPECIFICATIONS:
+
+Build the specification table dynamically from stored product attributes and specifications.
+
+Example:
+
+For a laptop, show processor, RAM, storage, display, battery, and graphics.
+
+For a mobile, show chipset, RAM, storage, battery, camera, display, and operating system.
+
+For clothing, show fabric, size, fit, material, and care instructions.
+
+For shoes, show material, size, sole, color, and other configured information.
+
+Do not display empty specifications.
+
+Do not display irrelevant fields.
+
+Preserve administrator-defined section ordering.
+
+CUSTOMER REVIEWS:
+
+Integrate existing review functionality.
+
+Display actual ratings, review counts, rating distribution, verified purchase indicators, and review content where supported.
+
+Q&A:
+
+Integrate existing question-and-answer functionality if available.
+
+SHIPPING & RETURNS:
+
+Display actual shipping and return policies from existing configuration or product-specific settings.
+
+K. RELATED PRODUCTS
+
+Display relevant products dynamically using category, brand, or existing recommendation logic.
+
+Each product card must use actual database information.
+
+L. FOOTER
+
+Preserve the existing NOVARA footer and global site design.
+
+==================================================
+PHASE 7 — ADVANCED DYNAMIC CONTENT SECTIONS
+==================================================
+
+Provide additional flexibility beyond the reference design.
+
+Allow administrators to configure optional product detail sections, such as:
+
+- Technical Specifications
+- Product Highlights
+- What's in the Box
+- Compatibility
+- Dimensions
+- Materials
+- Care Instructions
+- Safety Information
+- Warranty Details
+- Manufacturer Information
+- Product Certifications
+- Additional Notes
+- Custom Information Sections
+
+The administrator must be able to:
+
+- Create a section.
+- Rename a section.
+- Add custom content.
+- Add custom fields.
+- Reorder sections.
+- Enable or disable sections.
+- Control customer visibility.
+- Delete sections safely.
+
+The frontend must render these sections dynamically.
+
+Do not force every product to contain all sections.
+
+==================================================
+PHASE 8 — DATABASE ARCHITECTURE
+==================================================
+
+Inspect the current database technology and existing schemas before designing migrations.
+
+Implement a normalized, scalable data architecture appropriate to the existing database.
+
+The architecture should support the following logical entities where appropriate:
+
+1. Products
+2. Categories
+3. Subcategories
+4. Brands
+5. ProductAttributes
+6. AttributeOptions
+7. CategoryAttributeAssignments
+8. ProductAttributeValues
+9. ProductSpecifications
+10. ProductSpecificationGroups
+11. ProductVariants
+12. VariantAttributes
+13. ProductImages
+14. ProductVideos
+15. ProductFeatures
+16. ProductContentSections
+17. ProductReviews
+18. ProductQuestions
+19. InventoryRecords
+20. ProductSEO
+
+These are logical responsibilities, not a requirement to create unnecessary collections or tables.
+
+Choose an appropriate relational or document-oriented representation based on the existing database.
+
+Requirements:
+
+- Correct relationships.
+- Proper indexing.
+- Unique SKU constraints.
+- Data validation.
+- Referential integrity where supported.
+- Efficient product queries.
+- Pagination.
+- Safe deletion behavior.
+- Consistent timestamps.
+- Backward compatibility.
+
+Do not destroy existing product records.
+
+If schema changes are required, implement safe migrations or backward-compatible schema evolution.
+
+Preserve all existing production data.
+
+==================================================
+PHASE 9 — BACKEND API AND BUSINESS LOGIC
+==================================================
+
+Implement complete backend integration.
+
+Create or upgrade API endpoints according to the existing project conventions.
+
+Required capabilities:
+
+- Create Product
+- Get Products
+- Get Single Product
+- Update Product
+- Delete Product
+- Create Attribute
+- Update Attribute
+- Delete Attribute
+- Assign Attributes to Categories
+- Retrieve Category Attributes
+- Create Product Specifications
+- Update Product Specifications
+- Create Variants
+- Update Variants
+- Delete Variants
+- Retrieve Available Variants
+- Update Inventory
+- Upload Product Media
+- Retrieve Product Details
+- Retrieve Related Products
+
+Requirements:
+
+1. Server-side validation.
+2. Proper authentication.
+3. Role-based authorization.
+4. Admin-only product management.
+5. Safe error handling.
+6. Consistent JSON responses.
+7. Proper HTTP status codes.
+8. Database transaction support where applicable.
+9. Input sanitization.
+10. Protection against unauthorized modifications.
+
+Never trust frontend validation alone.
+
+Never expose administrative operations to unauthorized users.
+
+Ensure API endpoints return JSON rather than HTML error pages.
+
+==================================================
+PHASE 10 — PRODUCT FILTERING AND SEARCH
+==================================================
+
+Integrate dynamic attributes with the existing search and filtering system.
+
+Where enabled by the administrator, customers should be able to filter products by:
+
+- Brand
+- RAM
+- Storage
+- Processor
+- Color
+- Size
+- Material
+- Price
+- Availability
+- Other configured filterable attributes
+
+The filtering engine must discover relevant attributes from actual category configuration.
+
+Do not hardcode mobile-specific or clothing-specific filters globally.
+
+Ensure pagination, sorting, and filtering work together efficiently.
+
+==================================================
+PHASE 11 — ADMIN PANEL USER EXPERIENCE
+==================================================
+
+The Admin Panel must provide a professional, intuitive management experience.
+
+Create separate, clearly organized management interfaces for:
+
+- Products
+- Categories
+- Brands
+- Attributes
+- Attribute Groups
+- Variant Options
+- Product Variants
+- Product Specifications
+
+Where practical, provide inline creation of new attributes and options during product creation.
+
+Add:
+
+- Loading states.
+- Empty states.
+- Validation messages.
+- Success notifications.
+- Error notifications.
+- Confirmation dialogs.
+- Unsaved changes protection.
+- Responsive layouts.
+
+The administrator must be able to manage everything without editing source code or accessing the database manually.
+
+==================================================
+PHASE 12 — FRONTEND AND DESIGN REQUIREMENTS
+==================================================
+
+The uploaded reference image is the mandatory design direction for the Product Details Page.
+
+Maintain the same premium NOVARA visual identity.
+
+Design characteristics:
+
+- Clean white and light-blue background.
+- Deep navy typography.
+- Bright blue primary buttons.
+- Rounded cards.
+- Subtle shadows.
+- Premium product gallery.
+- Spacious product information layout.
+- Clear price hierarchy.
+- Professional variant selectors.
+- Responsive specification sections.
+- Premium related product cards.
+
+Desktop:
+
+Reproduce the reference's two-column product details layout, with the image gallery on the left and product information on the right.
+
+Tablet:
+
+Adapt the layout without breaking component hierarchy.
+
+Mobile:
+
+Use a clean single-column layout with responsive image gallery, readable specifications, accessible variant selectors, and properly positioned purchase controls.
+
+IMPORTANT:
+
+Do not redesign unrelated pages.
+
+Do not modify the global theme unnecessarily.
+
+Reuse existing design tokens and components wherever possible.
+
+==================================================
+PHASE 13 — PERFORMANCE, SECURITY AND PRODUCTION QUALITY
+==================================================
+
+Implement production-grade standards:
+
+- Efficient database queries.
+- Proper pagination.
+- Optimized product images.
+- Lazy loading where appropriate.
+- Caching where appropriate.
+- Input validation.
+- Authorization checks.
+- Safe file uploads.
+- Protection against malformed requests.
+- Consistent error handling.
+- No unnecessary API requests.
+- No N+1 query problems.
+- No duplicate database records.
+- No memory leaks.
+- No console errors.
+- No broken routes.
+
+For product creation and variant updates, ensure data consistency.
+
+If a product has multiple variants, the purchase system must correctly identify the selected variant and its inventory.
+
+If an administrator changes an attribute definition, existing product values must not silently become corrupted.
+
+If an attribute is deleted, handle its existing references safely.
+
+Do not silently delete historical order information or break existing purchases.
+
+==================================================
+PHASE 14 — BACKWARD COMPATIBILITY AND STRICT CHANGE CONTROL
+==================================================
+
+THIS SECTION IS MANDATORY.
+
+You must preserve the existing project.
+
+DO NOT:
+
+- Replace the entire application.
+- Rewrite unrelated modules.
+- Change existing authentication logic.
+- Change existing authorization logic.
+- Change unrelated backend APIs.
+- Change unrelated database models.
+- Rename existing routes.
+- Break existing URLs.
+- Remove existing components.
+- Remove existing functionality.
+- Change the global navigation.
+- Redesign unrelated pages.
+- Replace working cart functionality.
+- Replace working checkout functionality.
+- Break existing payment integrations.
+- Remove existing product data.
+- Replace the existing database.
+- Introduce unnecessary dependencies.
+
+Do not make destructive architectural changes.
+
+If an existing component can be extended, extend it instead of replacing it.
+
+If an existing API can be enhanced backward-compatibly, enhance it instead of creating unnecessary duplicate APIs.
+
+Keep changes isolated to the Product Management and Product Details functionality, along with strictly necessary supporting integrations.
+
+Any required supporting changes must be minimal, justified, and backward-compatible.
+
+Preserve all existing URLs and public interfaces.
+
+==================================================
+PHASE 15 — COMPLETE FUNCTIONAL TESTING
+==================================================
+
+Do not consider the task complete simply because the UI looks correct.
+
+Test the complete workflow.
+
+TEST 1 — MOBILE PRODUCT
+
+Create a mobile product with:
+
+- Brand: Samsung
+- Model: Galaxy S Series
+- RAM: 12GB
+- Storage: 256GB
+- Processor: Snapdragon
+- Battery: 5000mAh
+- Charging: 67W
+- Color: Black and Blue
+
+Verify that the administrator can save the product and that all configured details appear correctly on the customer-facing product page.
+
+TEST 2 — LAPTOP PRODUCT
+
+Create a laptop with different attributes:
+
+- Processor
+- RAM
+- SSD
+- Graphics
+- Display
+- Battery
+
+Verify that mobile-specific fields do not appear unless explicitly configured.
+
+TEST 3 — SHIRT PRODUCT
+
+Create a shirt with:
+
+- Brand
+- Fabric
+- Size
+- Color
+- Fit
+- Material
+
+Verify that size and color variants work correctly.
+
+TEST 4 — SHOES PRODUCT
+
+Create shoes with:
+
+- Brand
+- Shoe Type
+- Material
+- Size 38–45
+- Color
+
+Verify that customers can select available sizes and that unavailable sizes cannot be purchased.
+
+TEST 5 — CUSTOM ATTRIBUTE
+
+Create a completely new attribute that did not previously exist.
+
+Save it to a product.
+
+Verify that it persists after refreshing the page and appears correctly on the frontend.
+
+TEST 6 — OPTIONAL FIELDS
+
+Create a product with only a few fields.
+
+Verify that optional fields do not prevent product creation.
+
+Verify that empty sections are hidden on the customer-facing page.
+
+TEST 7 — VARIANT INVENTORY
+
+Create multiple variants with different stock quantities and prices.
+
+Purchase a specific variant using the existing cart and checkout workflow.
+
+Verify that the correct variant and inventory are processed.
+
+TEST 8 — UPDATE AND DELETE
+
+Update a product attribute, change a variant, edit pricing, and delete a product where safe.
+
+Verify that all changes persist correctly.
+
+TEST 9 — EXISTING FUNCTIONALITY
+
+Verify that existing:
+
+- Cart
+- Wishlist
+- Checkout
+- Search
+- Category pages
+- Product listing pages
+- Authentication
+- Admin permissions
+- Product URLs
+
+continue to work correctly.
+
+==================================================
+PHASE 16 — FINAL PRODUCTION AUDIT
+==================================================
+
+After implementation:
+
+1. Run the existing project's build command.
+2. Run relevant tests.
+3. Check frontend compilation.
+4. Check backend startup.
+5. Check database connectivity.
+6. Check API responses.
+7. Inspect browser console errors.
+8. Inspect server logs.
+9. Verify database persistence.
+10. Verify admin authorization.
+11. Verify responsive layouts.
+12. Verify the complete product creation workflow.
+13. Verify the complete product purchase workflow.
+
+Fix all implementation-related errors introduced by your changes.
+
+Do not hide errors using fake success messages, hardcoded fallback data, or mock responses.
+
+Do not claim that something works unless it has actually been verified.
+
+==================================================
+FINAL ACCEPTANCE CRITERIA — ALL MANDATORY
+==================================================
+
+The task is complete ONLY when all the following conditions are satisfied:
+
+[ ] The existing project architecture is preserved.
+
+[ ] The Admin Product Creation system is fully functional.
+
+[ ] Administrators can create custom attributes dynamically.
+
+[ ] Administrators can create category-specific attributes.
+
+[ ] Administrators can create product-specific specifications.
+
+[ ] Administrators can create and manage variants dynamically.
+
+[ ] Variant-specific pricing and inventory work correctly.
+
+[ ] Optional fields can remain empty.
+
+[ ] No irrelevant specification appears on a product page.
+
+[ ] Product details are loaded from the actual database.
+
+[ ] The uploaded reference design is faithfully implemented.
+
+[ ] Product images and galleries work dynamically.
+
+[ ] Product descriptions and specifications are dynamic.
+
+[ ] Customer variant selection works correctly.
+
+[ ] Cart and wishlist integrations work.
+
+[ ] Backend APIs work correctly.
+
+[ ] Database persistence works correctly.
+
+[ ] Existing product data remains intact.
+
+[ ] Existing routes and unrelated functionalities remain intact.
+
+[ ] Production build succeeds.
+
+[ ] No critical implementation-related errors remain.
+
+==================================================
+FINAL EXECUTION INSTRUCTIONS
+==================================================
+
+Work in a disciplined engineering sequence:
+
+STEP 1: Read and understand the complete existing project.
+
+STEP 2: Audit the existing Product Management and Product Details architecture.
+
+STEP 3: Identify existing hardcoded fields, broken integrations, and missing functionality.
+
+STEP 4: Design the appropriate database and backend architecture.
+
+STEP 5: Implement the Dynamic Attribute Engine.
+
+STEP 6: Implement the Dynamic Variant Engine.
+
+STEP 7: Upgrade the Admin Product Creation and Editing experience.
+
+STEP 8: Implement the reference-based dynamic Product Details Page.
+
+STEP 9: Integrate cart, wishlist, inventory, search, and existing business logic.
+
+STEP 10: Execute comprehensive tests and fix issues.
+
+STEP 11: Perform the final backward-compatibility audit.
+
+DO NOT STOP AFTER CREATING THE UI.
+
+DO NOT RETURN ONLY A TECHNICAL PLAN.
+
+DO NOT IMPLEMENT ONLY THE FRONTEND.
+
+DO NOT USE MOCK DATA AS A SUBSTITUTE FOR DATABASE INTEGRATION.
+
+YOU MUST IMPLEMENT THE ACTUAL WORKING FULL-STACK SOLUTION.
+
+If a required feature already exists, reuse and enhance it rather than duplicating it.
+
+If a technical limitation exists, explain it honestly and implement the safest compatible solution.
+
+At completion, provide a concise engineering report containing:
+
+1. What was inspected.
+2. What was implemented.
+3. Database changes.
+4. Backend API changes.
+5. Admin Panel changes.
+6. Product Details Page changes.
+7. Tests executed.
+8. Build results.
+9. Any remaining issues.
+
+FINAL PRIORITY:
+
+A fully functional, database-driven, administrator-controlled, dynamic e-commerce product architecture with a premium NOVARA Product Details Page faithfully following the uploaded reference image.
+
+Every product must be independently configurable.
+
+The administrator must have complete practical control over product attributes, specifications, variants, options, features, and optional content without requiring source-code changes.
+
+IMPLEMENT THIS WITH PRODUCTION-LEVEL ENGINEERING QUALITY.

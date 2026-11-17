@@ -1,0 +1,1103 @@
+# MASTER ENGINEERING PROMPT
+# NOVARA COMMERCE — PREMIUM REGISTRATION PAGE & COMPLETE AUTHENTICATION SYSTEM
+
+You are acting as a Principal Software Architect, Senior Full-Stack Developer, Authentication Security Engineer, Database Architect, UI/UX Designer, and QA Automation Engineer.
+
+Your mission is to transform the existing NOVARA COMMERCE Registration and Account Creation System into a premium, fully functional, secure, responsive, production-ready authentication experience.
+
+## PRIMARY DESIGN REFERENCE — STRICTLY MANDATORY
+
+The uploaded image is the EXACT primary visual reference.
+
+You MUST recreate the Registration Page as closely as possible to the uploaded image.
+
+Do not create a generic registration page.
+
+Do not use a different layout.
+
+Do not simplify the design.
+
+Do not replace the design with a conventional centered registration card.
+
+The final result must closely match the reference image in:
+
+- Overall layout.
+- Two-column structure.
+- Background.
+- White rounded main container.
+- NOVARA branding.
+- Typography.
+- Blue color palette.
+- Spacing.
+- Form dimensions.
+- Input styles.
+- Button styles.
+- Icons.
+- Illustrations.
+- Decorative elements.
+- Shadows.
+- Border radius.
+- Visual hierarchy.
+
+The reference image is the mandatory design specification.
+
+However, all form fields, authentication workflows, validation, and database operations must be genuinely functional.
+
+THIS IS NOT A FRONTEND-ONLY TASK.
+
+You must implement the complete authentication system across:
+
+1. Frontend.
+2. Backend.
+3. Database.
+4. API.
+5. Authentication Services.
+6. Router Modules.
+7. User Model.
+8. Password Security.
+9. Email Validation.
+10. Google Authentication.
+11. Facebook Authentication.
+12. Session Management.
+13. Admin Panel.
+14. Account Statistics.
+15. Security.
+16. Automated Testing.
+
+==================================================
+PHASE 1 — COMPLETE EXISTING PROJECT AUDIT
+==================================================
+
+Before modifying any code, inspect and understand the entire existing NOVARA COMMERCE project.
+
+Read and investigate:
+
+1. Existing Registration Page.
+2. Existing Sign In Page.
+3. Navigation Bar Account Button.
+4. Current Registration Popup.
+5. Current Modal and Backdrop Overlay.
+6. Authentication Components.
+7. Authentication Context or State Management.
+8. Existing User Model.
+9. Database Schema.
+10. Backend Authentication Routes.
+11. Authentication Controllers.
+12. Authentication Services.
+13. Password Hashing Implementation.
+14. JWT or Session Management.
+15. Email Verification System.
+16. Password Reset System.
+17. Google OAuth Integration.
+18. Facebook OAuth Integration.
+19. User Roles and Permissions.
+20. Admin Dashboard.
+21. Admin User Management.
+22. Existing API Endpoints.
+23. Protected Routes.
+24. Logout Functionality.
+
+Trace the complete authentication workflow.
+
+Identify which features already exist, which features are working, and which features are incomplete.
+
+Do not start implementation until you understand the existing architecture.
+
+Reuse existing working authentication services and components wherever possible.
+
+==================================================
+PHASE 2 — REMOVE EXISTING REGISTRATION MODAL
+==================================================
+
+IMPORTANT: The current project has an account registration interaction in the navigation bar.
+
+Currently, clicking the account creation option opens a popup/modal with a backdrop overlay containing the registration functionality.
+
+I DO NOT WANT THIS EXISTING REGISTRATION MODAL EXPERIENCE.
+
+Remove the existing registration modal/backdrop-overlay registration flow and replace it with a dedicated full-page Registration Experience matching the uploaded image.
+
+EXPECTED BEHAVIOR:
+
+1. Customer clicks the Account/Create Account option in the existing navigation bar.
+2. Customer is navigated to the dedicated Registration Page.
+3. The full-page premium registration interface opens.
+4. Customer can create an account.
+5. Existing Sign In functionality remains available.
+6. Existing authentication and account navigation remain compatible.
+
+IMPORTANT:
+
+Do not break the existing global navigation.
+
+Do not unnecessarily change existing URL structures.
+
+Inspect and reuse the existing registration and authentication routes wherever possible.
+
+If the project already has a dedicated registration URL, reuse it.
+
+If the existing registration is modal-only, introduce a dedicated route using the smallest backward-compatible change.
+
+Ensure browser refresh and direct URL access work correctly.
+
+Do not leave duplicate or conflicting registration interfaces.
+
+==================================================
+PHASE 3 — EXACT REFERENCE-MATCHING REGISTRATION DESIGN
+==================================================
+
+Recreate the uploaded image as closely as possible.
+
+DESIGN STRUCTURE:
+
+A. MAIN BACKGROUND
+
+- Premium light blue and white gradient background.
+- Decorative abstract geometric shapes.
+- Soft blue lighting effects.
+- Modern visual appearance.
+- Responsive background positioning.
+
+B. MAIN REGISTRATION CONTAINER
+
+- Large white rounded rectangular container.
+- Two-column layout.
+- Premium subtle border.
+- Soft shadow.
+- Balanced spacing.
+- Professional appearance.
+
+C. LEFT COLUMN — NOVARA BRANDING
+
+Recreate the left side of the reference image.
+
+Display:
+
+NOVARA Logo.
+
+Tagline:
+Shop Smart. Live Better.
+
+Main Heading:
+
+Create Your
+Account Today!
+
+Supporting Text:
+
+Unlock a better shopping experience with NOVARA.
+
+FEATURE HIGHLIGHTS:
+
+1. Faster Checkout
+   Shop quickly and easily.
+
+2. Exclusive Offers
+   Get special deals and discounts.
+
+3. Secure & Reliable
+   Your data is always safe.
+
+Use attractive circular blue icon backgrounds.
+
+BOTTOM ILLUSTRATION:
+
+Recreate the reference image's premium shopping illustration.
+
+Include:
+
+- NOVARA shopping bags.
+- Gift box with blue ribbon.
+- Premium laptop illustration.
+- Elegant blue and white platform.
+- Soft gradient background.
+- Decorative blue shapes.
+
+Use suitable high-quality image assets or existing project assets.
+
+Do not replace the branding illustration with unrelated imagery.
+
+All decorative elements must remain responsive.
+
+D. RIGHT COLUMN — REGISTRATION FORM
+
+Recreate the right-side form layout.
+
+Top badge:
+
+Welcome to NOVARA
+
+Main Heading:
+
+Create Account
+
+Subtitle:
+
+Join us and enjoy a premium shopping experience.
+
+REGISTRATION FIELDS:
+
+1. Full Name *
+2. Email Address *
+3. Password *
+4. Confirm Password *
+
+INPUT DESIGN:
+
+- Premium rounded input fields.
+- Light blue borders.
+- Subtle shadows.
+- Proper spacing.
+- Suitable icons.
+- Clear placeholder text.
+- Accessible focus states.
+- Professional error states.
+
+PASSWORD VISIBILITY:
+
+Provide functional Show/Hide Password controls for:
+
+- Password.
+- Confirm Password.
+
+E. CREATE ACCOUNT BUTTON
+
+Recreate the full-width blue gradient button.
+
+Button text:
+
+Create Account →
+
+Requirements:
+
+- Premium blue gradient.
+- Smooth hover effect.
+- Loading state.
+- Disabled state while submitting.
+- Prevent repeated submissions.
+- Display meaningful success or error feedback.
+
+F. SOCIAL AUTHENTICATION
+
+Recreate the divider:
+
+or continue with
+
+Display two buttons:
+
+- Continue with Google.
+- Continue with Facebook.
+
+Use authentic brand icons.
+
+Buttons must connect to actual OAuth implementations.
+
+Do not implement fake social login buttons.
+
+If credentials are not configured, clearly report the configuration requirement instead of pretending authentication works.
+
+G. SIGN IN NAVIGATION
+
+At the bottom:
+
+Already have an account? Sign In →
+
+Clicking Sign In must navigate to the existing Sign In Page.
+
+The existing Sign In Page must remain functional.
+
+==================================================
+PHASE 4 — REGISTRATION FORM VALIDATION
+==================================================
+
+Implement proper frontend AND backend validation.
+
+FULL NAME:
+
+- Required.
+- Trim unnecessary whitespace.
+- Reject empty values.
+- Apply reasonable length limits.
+- Reject invalid input according to the project's validation rules.
+
+EMAIL ADDRESS:
+
+- Required.
+- Validate email format.
+- Trim whitespace.
+- Normalize email consistently.
+- Prevent duplicate accounts.
+- Enforce database-level uniqueness.
+
+PASSWORD:
+
+MANDATORY MINIMUM LENGTH: 8 CHARACTERS.
+
+Additional recommended requirements:
+
+- At least one uppercase letter.
+- At least one lowercase letter.
+- At least one number.
+- A special character where compatible with existing password policy.
+
+Do not silently enforce frontend-only password rules.
+
+The backend must independently validate passwords.
+
+CONFIRM PASSWORD:
+
+- Required.
+- Must match the password.
+- Display a clear mismatch message.
+- Do not submit mismatched passwords.
+
+VALIDATION EXPERIENCE:
+
+- Show field-specific errors.
+- Display accessible error messages.
+- Remove errors when corrected.
+- Show submission progress.
+- Display clear success feedback.
+- Prevent accidental duplicate submissions.
+
+==================================================
+PHASE 5 — REAL BACKEND ACCOUNT CREATION
+==================================================
+
+This is a mandatory requirement.
+
+Registration must create actual persistent user records in the existing database.
+
+Inspect the current User Model before implementing anything.
+
+Reuse the existing model and authentication architecture.
+
+Implement or repair the actual registration workflow:
+
+Frontend Form
+→ Registration API
+→ Backend Validation
+→ Email Normalization
+→ Existing Account Check
+→ Password Hashing
+→ Database User Creation
+→ Appropriate Verification Workflow
+→ Registration Response
+→ Sign In or Authenticated State.
+
+Never simulate successful account creation.
+
+Never store plain-text passwords.
+
+PASSWORD SECURITY:
+
+Use the project's existing secure password hashing mechanism.
+
+If there is no existing mechanism, implement a well-maintained secure password hashing algorithm such as Argon2id or bcrypt with appropriate configuration.
+
+Never return password hashes to the frontend.
+
+Never log passwords.
+
+Never expose authentication secrets.
+
+DATABASE REQUIREMENTS:
+
+Ensure the user schema correctly supports:
+
+- Unique Email.
+- Full Name.
+- Password Hash.
+- Role.
+- Account Status.
+- Email Verification Status.
+- Created At.
+- Updated At.
+- Last Login where supported.
+- Authentication Provider where applicable.
+
+Adapt these fields to the existing architecture.
+
+Create a database-level unique index for normalized email addresses where supported.
+
+Handle concurrent duplicate registration requests safely.
+
+Do not create multiple user records for the same normalized email.
+
+==================================================
+PHASE 6 — EXISTING EMAIL ACCOUNT DUPLICATE PREVENTION
+==================================================
+
+THIS IS A CRITICAL REQUIREMENT.
+
+The current system must correctly handle customers who already have an account.
+
+Example:
+
+A customer registers using:
+
+Email: customer@example.com
+
+Password: ********
+
+The account is created successfully.
+
+The customer logs out.
+
+Later, the customer attempts to register again using the same email.
+
+EXPECTED BEHAVIOR:
+
+- Do not create a second account.
+- Do not create duplicate database records.
+- Do not return an unhandled server error.
+- Do not crash the registration form.
+- Do not create conflicting authentication sessions.
+
+Provide a helpful registration response.
+
+Suggested message:
+
+"An account may already be associated with this email. Please sign in or reset your password."
+
+Provide convenient actions:
+
+- Sign In.
+- Forgot Password.
+
+If the existing account is unverified, follow the existing email verification workflow and provide an appropriate resend-verification option.
+
+IMPORTANT:
+
+The user must never need to create another account just because they logged out.
+
+They should use the existing Sign In system.
+
+Normalize email addresses consistently before checking uniqueness.
+
+Handle case differences and surrounding whitespace.
+
+Example:
+
+Customer@Example.com
+
+customer@example.com
+
+These must be treated as the same normalized email identity.
+
+Enforce uniqueness at the database level, not just in the frontend.
+
+Handle database duplicate-key errors gracefully.
+
+Use appropriate rate limiting to protect registration and account-enumeration-sensitive endpoints.
+
+==================================================
+PHASE 7 — GOOGLE AUTHENTICATION
+==================================================
+
+The Continue with Google button must support genuine Google OAuth authentication.
+
+Inspect the existing Google authentication integration.
+
+If it exists, repair and reuse it.
+
+Otherwise, implement it using the appropriate supported OAuth architecture.
+
+Requirements:
+
+- Google OAuth initiation.
+- Secure callback handling.
+- State validation.
+- OAuth identity verification.
+- User account creation or linking.
+- Existing account handling.
+- Session creation.
+- Correct redirect.
+- Error handling.
+- Secure token handling.
+
+IMPORTANT:
+
+If an email/password account already exists with the same verified Google email, implement safe account-linking rules.
+
+Never create duplicate accounts for the same normalized email identity.
+
+Never trust an unverified email claim.
+
+Never expose OAuth client secrets in frontend code.
+
+If Google credentials are unavailable, clearly report the missing configuration.
+
+==================================================
+PHASE 8 — FACEBOOK AUTHENTICATION
+==================================================
+
+The Continue with Facebook button must support genuine Facebook OAuth.
+
+Requirements:
+
+- Facebook OAuth initiation.
+- Secure callback.
+- State validation.
+- Verified provider identity.
+- Account creation or linking.
+- Existing account handling.
+- Session management.
+- Correct redirect.
+- Error handling.
+
+If the user already has an account with the same verified email, follow safe account-linking rules.
+
+Never create duplicate accounts.
+
+Never simulate Facebook login.
+
+If credentials are unavailable, report the exact configuration requirement.
+
+==================================================
+PHASE 9 — SIGN IN AND LOGOUT INTEGRATION
+==================================================
+
+Registration, Sign In, and Logout must function as one coherent authentication system.
+
+Verify:
+
+- Existing customer can Sign In.
+- Correct credentials work.
+- Incorrect credentials show safe errors.
+- Logout invalidates the appropriate session.
+- Protected routes remain protected.
+- Registration does not break existing login.
+- Existing accounts remain accessible.
+- Password reset works.
+- Session expiration works.
+- Authentication state refreshes correctly.
+- Browser refresh does not accidentally log out valid sessions.
+
+After successful registration, follow the existing email verification and authentication policy.
+
+Do not automatically authenticate an unverified user if the current security architecture requires email verification.
+
+If verification is not implemented, assess whether it is appropriate to introduce it without breaking existing workflows.
+
+==================================================
+PHASE 10 — EMAIL VERIFICATION AND PASSWORD RESET
+==================================================
+
+Inspect existing email infrastructure.
+
+If email verification already exists, integrate it correctly.
+
+Where supported, provide:
+
+- Verification email.
+- Secure verification token.
+- Token expiration.
+- Verification confirmation.
+- Resend verification.
+- Single-use token handling.
+
+Password reset should include:
+
+- Forgot Password route.
+- Email submission.
+- Secure reset token.
+- Token expiration.
+- Single-use token.
+- Password confirmation.
+- Secure password update.
+- Session invalidation where appropriate.
+
+Do not reveal sensitive account information through error messages or email responses.
+
+If an email provider is not configured, report the configuration requirement instead of pretending emails are being delivered.
+
+==================================================
+PHASE 11 — ADMIN PANEL USER MANAGEMENT
+==================================================
+
+THIS IS MANDATORY.
+
+Every successfully created account must be stored in the same actual user database used by the existing Admin Panel.
+
+Inspect the existing Admin Dashboard and User Management modules.
+
+Reuse existing modules wherever possible.
+
+Provide accurate account statistics.
+
+ADMIN DASHBOARD:
+
+Display:
+
+- Total Registered Users.
+- New Users Today.
+- New Users This Week.
+- New Users This Month.
+- Verified Users.
+- Unverified Users.
+- Active Users.
+- Disabled Users.
+
+All counts must be database-driven.
+
+Do not use hardcoded numbers.
+
+Do not use fake registration data.
+
+USER MANAGEMENT:
+
+Admin should be able to:
+
+1. View all registered users.
+2. Search users.
+3. Filter users.
+4. Sort users.
+5. Paginate users.
+6. View user details.
+7. View registration date.
+8. View account status.
+9. View email verification status.
+10. View authentication provider where appropriate.
+11. Disable accounts with proper authorization.
+12. Reactivate accounts.
+13. Manage user roles according to existing permissions.
+
+IMPORTANT:
+
+Never display user passwords or password hashes in the Admin Panel.
+
+Do not expose private authentication tokens.
+
+Prevent unauthorized role escalation.
+
+Protect administrative operations with existing role-based authorization.
+
+==================================================
+PHASE 12 — API AND ROUTER IMPLEMENTATION
+==================================================
+
+Inspect existing API and router architecture.
+
+Reuse existing routes when possible.
+
+Ensure the following capabilities exist through the project's actual API structure:
+
+- User Registration.
+- User Login.
+- User Logout.
+- Current User Profile.
+- Email Verification.
+- Resend Verification.
+- Forgot Password.
+- Password Reset.
+- Google OAuth.
+- Facebook OAuth.
+- Admin User Listing.
+- Admin User Details.
+- Admin User Statistics.
+- Admin Account Status Management.
+
+These are functional requirements, not instructions to blindly create duplicate endpoints.
+
+Use the existing naming conventions.
+
+Implement:
+
+- Request validation.
+- Response validation.
+- Authentication middleware.
+- Authorization middleware.
+- Error handling.
+- Rate limiting.
+- Secure cookie/session configuration where applicable.
+
+Ensure API responses are valid JSON.
+
+Handle server errors gracefully.
+
+Never expose internal stack traces or database errors to public users.
+
+==================================================
+PHASE 13 — SECURITY REQUIREMENTS
+==================================================
+
+Apply production-grade authentication security.
+
+MANDATORY:
+
+- Secure password hashing.
+- Database-level email uniqueness.
+- Email normalization.
+- Strong server-side validation.
+- Secure session management.
+- CSRF protection where applicable.
+- XSS protection.
+- Rate limiting.
+- Brute-force protection.
+- Secure OAuth state validation.
+- Secure token storage.
+- Safe error handling.
+- Role-based authorization.
+- Account ownership validation.
+- Protection against duplicate registration.
+- Secure password reset.
+- Secure email verification.
+- HTTPS-aware cookie configuration.
+
+Never store plain-text passwords.
+
+Never return password hashes.
+
+Never expose API secrets.
+
+Never place OAuth secrets in client-side code.
+
+Never bypass existing authentication middleware.
+
+==================================================
+PHASE 14 — RESPONSIVE DESIGN
+==================================================
+
+The uploaded image is a desktop reference.
+
+Reproduce its visual appearance as closely as possible on desktop.
+
+Also implement high-quality responsive behavior.
+
+DESKTOP:
+
+- Two-column layout.
+- Left branding and promotional illustration.
+- Right registration form.
+- Large premium container.
+- Reference-matching spacing.
+
+TABLET:
+
+- Balanced column sizing.
+- Responsive illustration.
+- Proper form width.
+- No horizontal overflow.
+
+MOBILE:
+
+- Single-column registration layout.
+- Branding section at the top.
+- Compact promotional illustration.
+- Registration form below.
+- Full-width input fields.
+- Touch-friendly buttons.
+- Proper spacing.
+- Responsive typography.
+- No horizontal scrolling.
+
+Maintain the NOVARA brand identity at all screen sizes.
+
+==================================================
+PHASE 15 — STRICT PROJECT PRESERVATION
+==================================================
+
+THIS IS AN ABSOLUTE REQUIREMENT.
+
+Do not modify unrelated parts of the existing project.
+
+DO NOT:
+
+- Rewrite the complete project.
+- Replace the application architecture.
+- Replace the existing database.
+- Change unrelated business logic.
+- Break the existing navigation.
+- Break the Product Details Page.
+- Break the Cart Page.
+- Break the Checkout Page.
+- Break existing order processing.
+- Break existing payment integration.
+- Break the Admin Dashboard.
+- Break existing customer accounts.
+- Rename existing routes unnecessarily.
+- Delete existing API endpoints.
+- Replace working authentication services unnecessarily.
+- Modify unrelated components.
+- Redesign unrelated pages.
+- Delete existing data.
+- Add unnecessary dependencies.
+
+The only intended UI replacement is the existing registration modal experience with the new dedicated Registration Page.
+
+Preserve the existing Sign In functionality and all other working features.
+
+Use minimal, targeted, backward-compatible changes.
+
+==================================================
+PHASE 16 — COMPLETE FUNCTIONAL TESTING
+==================================================
+
+Do not stop after completing the UI.
+
+Perform real tests.
+
+TEST 1 — REGISTRATION DESIGN
+
+- Open the Registration Page.
+- Verify the reference design.
+- Verify left branding section.
+- Verify illustration.
+- Verify all four form fields.
+- Verify responsive behavior.
+
+TEST 2 — VALIDATION
+
+- Submit empty form.
+- Test invalid email.
+- Test password shorter than 8 characters.
+- Test mismatched passwords.
+- Test valid registration data.
+- Verify field-specific errors.
+
+TEST 3 — DATABASE
+
+- Register a new customer.
+- Verify actual database record creation.
+- Verify normalized email.
+- Verify password hash.
+- Verify role assignment.
+- Verify timestamps.
+- Verify unique email constraint.
+
+TEST 4 — DUPLICATE ACCOUNT
+
+- Register with a new email.
+- Log out.
+- Attempt registration again with the same email.
+- Verify duplicate prevention.
+- Verify friendly error message.
+- Verify Sign In navigation.
+- Verify no duplicate database record.
+
+TEST 5 — AUTHENTICATION
+
+- Sign in with existing account.
+- Sign out.
+- Sign in again.
+- Test incorrect credentials.
+- Test session persistence.
+- Test protected routes.
+
+TEST 6 — GOOGLE AND FACEBOOK
+
+Where credentials are configured:
+
+- Test OAuth initiation.
+- Test callback.
+- Test successful authentication.
+- Test account linking.
+- Test existing email handling.
+- Test failed authentication.
+
+Otherwise report BLOCKED due to missing provider configuration.
+
+TEST 7 — ADMIN PANEL
+
+- Register a new account.
+- Open Admin Dashboard.
+- Verify total account count.
+- Verify new registration count.
+- Verify user appears in User Management.
+- Verify registration timestamp.
+- Verify account status.
+- Verify filters and search.
+
+TEST 8 — REGRESSION
+
+Verify:
+
+- Navigation.
+- Homepage.
+- Product Details.
+- Cart.
+- Checkout.
+- Order Processing.
+- Customer Account.
+- Sign In.
+- Logout.
+- Admin Dashboard.
+
+Ensure no unrelated functionality has been broken.
+
+==================================================
+PHASE 17 — BUILD AND FINAL AUDIT
+==================================================
+
+After implementation:
+
+1. Run the frontend build.
+2. Start the backend.
+3. Verify database connection.
+4. Test authentication API.
+5. Test registration API.
+6. Test duplicate email handling.
+7. Test login and logout.
+8. Test protected routes.
+9. Test Admin User Management.
+10. Inspect frontend console.
+11. Inspect backend logs.
+12. Verify valid JSON API responses.
+13. Verify responsive layout.
+14. Verify all relevant security controls.
+15. Run regression tests.
+
+Fix actual implementation-related errors.
+
+Do not hide errors.
+
+Do not replace broken authentication with mock data.
+
+==================================================
+PHASE 18 — FINAL ACCEPTANCE CRITERIA
+==================================================
+
+The work is complete only when all applicable requirements are verified.
+
+DESIGN:
+
+[ ] Reference-matching Registration Page.
+[ ] Premium two-column layout.
+[ ] NOVARA branding.
+[ ] Promotional illustration.
+[ ] Full Name field.
+[ ] Email field.
+[ ] Password field.
+[ ] Confirm Password field.
+[ ] Password visibility controls.
+[ ] Premium Create Account button.
+[ ] Google login button.
+[ ] Facebook login button.
+[ ] Sign In navigation.
+[ ] Responsive desktop, tablet, mobile.
+
+FUNCTIONALITY:
+
+[ ] Dedicated Registration Page.
+[ ] Existing registration modal removed.
+[ ] Real backend registration.
+[ ] Real database persistence.
+[ ] Email validation.
+[ ] Minimum 8-character password.
+[ ] Password matching.
+[ ] Secure password hashing.
+[ ] Duplicate email prevention.
+[ ] Existing account Sign In.
+[ ] Logout functionality.
+[ ] Session management.
+[ ] Password reset.
+[ ] Email verification where configured.
+[ ] Google OAuth where configured.
+[ ] Facebook OAuth where configured.
+
+ADMIN PANEL:
+
+[ ] Total Registered Users.
+[ ] New Users Today.
+[ ] New Users This Week.
+[ ] New Users This Month.
+[ ] User Management.
+[ ] Search.
+[ ] Filters.
+[ ] Pagination.
+[ ] Account Status.
+[ ] Role Authorization.
+[ ] Database-driven counts.
+
+PROJECT PRESERVATION:
+
+[ ] Existing routes preserved.
+[ ] Existing authentication compatibility.
+[ ] Existing customer accounts preserved.
+[ ] Existing global navigation preserved.
+[ ] Existing business logic preserved.
+[ ] Unrelated pages unchanged.
+[ ] Existing Admin Panel functionality preserved.
+
+==================================================
+PHASE 19 — FINAL ENGINEERING REPORT
+==================================================
+
+After implementation, provide a complete report.
+
+Include:
+
+1. Existing Authentication Audit.
+2. Registration Page Redesign.
+3. Frontend Changes.
+4. Backend Changes.
+5. Database Changes.
+6. API and Router Changes.
+7. Password Security.
+8. Duplicate Email Prevention.
+9. Google OAuth Status.
+10. Facebook OAuth Status.
+11. Sign In and Logout Integration.
+12. Email Verification.
+13. Password Reset.
+14. Admin User Management.
+15. Dashboard Account Statistics.
+16. Responsive Design.
+17. Security Audit.
+18. Build Results.
+19. Testing Results.
+20. Remaining Issues.
+
+For each test, explicitly report:
+
+- PASSED
+- FAILED
+- BLOCKED
+- NOT TESTED
+
+Clearly distinguish features actually implemented from features reused from the existing project.
+
+Do not claim that a feature is working unless it has been verified.
+
+==================================================
+FINAL EXECUTION DIRECTIVE
+==================================================
+
+First, thoroughly read and understand the existing NOVARA COMMERCE project.
+
+Carefully inspect the uploaded Registration Page reference image.
+
+Audit the existing registration popup, authentication architecture, database, APIs, Admin Panel, and user management.
+
+Then remove the old registration modal experience and implement the dedicated premium Registration Page matching the reference image.
+
+Connect the form to the actual backend and database.
+
+Implement secure registration, email validation, password hashing, duplicate account prevention, existing account handling, and genuine social authentication where configured.
+
+Integrate account statistics and user management with the existing Admin Panel.
+
+Perform complete functional, integration, security, and regression testing.
+
+Do not modify unrelated functionality.
+
+Do not rebuild working systems unnecessarily.
+
+Do not stop at frontend design.
+
+FINAL RESULT:
+
+A PREMIUM, REFERENCE-MATCHING, FULLY RESPONSIVE, SECURE, DATABASE-DRIVEN, PRODUCTION-READY NOVARA COMMERCE REGISTRATION AND AUTHENTICATION SYSTEM.
+
+DESIGN FIDELITY IS MANDATORY.
+
+BACKEND INTEGRATION IS MANDATORY.
+
+DATABASE INTEGRITY IS MANDATORY.
+
+ADMIN PANEL INTEGRATION IS MANDATORY.
+
+SECURITY IS MANDATORY.
+
+FUNCTIONAL VERIFICATION IS MANDATORY.
